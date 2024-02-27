@@ -6,6 +6,7 @@
 }
 body{
     background-color: powderblue;
+    background-image: none;
 }
 .canvas{
     background: linear-gradient(135deg, rgb(13, 1, 126), rgb(48, 110, 255));
@@ -84,3 +85,32 @@ body{
     color: white;
     display: none;
 }
+
+
+.switch {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: inline-block;
+    padding: 5px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.switch button {
+    background: #f0f0f0;
+    color: #555;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.switch button:hover {
+    background-color: #e0e0e0;
+}
+
