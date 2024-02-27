@@ -6,10 +6,9 @@
 }
 body{
     background-color: powderblue;
-    background-image: none;
 }
 .canvas{
-    background: linear-gradient(135deg, rgb(13, 1, 126), rgb(48, 110, 255));
+    background: linear-gradient(135deg, rgb(3, 0, 67), rgb(56, 43, 156));
     width: 90%;
     max-width: 540px;
     margin: auto;
@@ -99,7 +98,7 @@ body{
 }
 
 .switch button {
-    background: #f0f0f0;
+    background-color: #f0f0f0;
     color: #555;
     border: none;
     outline: none;
@@ -114,3 +113,40 @@ body{
     background-color: #e0e0e0;
 }
 
+.darkmode {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: inline-block;
+    padding: 5px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.darkmode button {
+    background-color: #f0f0f0;
+    color: #555;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.darkmode button:hover {
+    background-color: #e0e0e0;
+}
+
+#bottomBar {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #676767;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}

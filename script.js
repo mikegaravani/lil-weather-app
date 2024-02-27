@@ -7,7 +7,6 @@ const weatherIcon = document.querySelector(".icon");
 
 // CELSIUS FAHRENHEIT SWITCH
 const switchButton = document.querySelector(".switch button");
-const bodyElement = document.querySelector("body");
 let isCelsius = true;
 
 switchButton.addEventListener("click", () => {
@@ -20,6 +19,27 @@ switchButton.addEventListener("click", () => {
         switchButton.innerHTML = "°F";
         
         isCelsius = false;
+    }
+    checkWeather(searchBox.value);
+});
+
+// LIGHT DARK SWITCH
+const darkMode = document.querySelector(".darkmode button");
+const bodyElement = document.querySelector("body");
+const canvasElement = document.querySelector(".canvas");
+
+darkMode.addEventListener("click", () => {
+
+    if (darkMode.innerHTML === "DARK") {
+        darkMode.innerHTML = "LIGHT";
+        bodyElement.style.backgroundColor = "powderblue";
+        canvasElement.style.background = "linear-gradient(135deg, rgb(3, 0, 67), rgb(56, 43, 156))"
+
+    } else {
+        darkMode.innerHTML = "DARK";
+        bodyElement.style.backgroundColor = "rgb(18, 0, 84)";
+        canvasElement.style.background = "linear-gradient(135deg, rgb(17, 0, 172), rgb(48, 110, 255))";
+
     }
     checkWeather(searchBox.value);
 });
@@ -64,6 +84,9 @@ async function checkWeather(city){
         }
         else if(data.weather[0].main == "Mist"){
             weatherIcon.src = "icons/mist.png";
+        }
+        else{
+            weatherIcon.src = "icons/snow.png";
         }
 
         document.querySelector(".weather").style.display = "block";
